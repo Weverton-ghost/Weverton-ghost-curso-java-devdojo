@@ -12,11 +12,11 @@ public class Aula02TiposPrimitivos {
 
         //Inteiros | diferença geral - (Tamanho);
         int minhaIdade = 20;
-        long numeroGrande = 1000000;
+        long numeroGrande = 1000000L;
 
         //Decimais;
-        double salarioDouble = 3000;
-        float salarioFloat = 2500;
+        double salarioDouble = 3000.00D;
+        float salarioFloat = 2500.00F;
 
         //Valores menores;
         byte idadeByte = 16;
@@ -35,6 +35,22 @@ public class Aula02TiposPrimitivos {
         System.out.println(verdadeiro);
         System.out.println(caractereAscii);
         System.out.println(caractere);
+
+        //Castings - não é prática tão boa, melhor trocar o tipo.
+
+        //Casting explícito com overflow = estouro;
+        int arteAntiga;
+        arteAntiga = (byte) 150;
+        System.out.println(arteAntiga);
+
+        int castingExemplo = (int) 1000000000000000L; //Número long
+        System.out.println(castingExemplo);
+
+        //Casting implicito
+        int valorArte = 290;
+        long arteAntiga2 = valorArte;
+        System.out.println(arteAntiga2);
+        //Só recebe o valor, não altera o limite.
 
     }
 }
